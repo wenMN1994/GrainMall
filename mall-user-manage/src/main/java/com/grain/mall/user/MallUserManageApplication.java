@@ -1,4 +1,4 @@
-package com.grain.mall;
+package com.grain.mall.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

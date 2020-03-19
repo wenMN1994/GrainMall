@@ -60,4 +60,11 @@ public interface ManageService {
      * @return
      */
     BaseAttrInfo getAttrInfo(String attrId);
+
+    /**
+     * 根据spuInfo 对象属性获取spuInfo 集合
+     * @param spuInfo
+     * @return
+     */
+    List<SpuInfo> getSpuList(SpuInfo spuInfo);
 }

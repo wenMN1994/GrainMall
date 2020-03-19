@@ -56,13 +56,6 @@ public class ManageController {
         manageService.saveAttrInfo(baseAttrInfo);
     }
 
-//    @RequestMapping("getAttrValueList")
-//    public List<BaseAttrValue> getAttrValueList(String attrId){
-//        // select * from baseAttrVallue where attrId = ?
-//
-//        return  manageService.getAttrValueList(attrId);
-//    }
-
     @RequestMapping("getAttrValueList")
     public List<BaseAttrValue> getAttrValueList(String attrId){
         // 先通过attrId 查询平台属性 select * from baseAttrInfo where id = attrId

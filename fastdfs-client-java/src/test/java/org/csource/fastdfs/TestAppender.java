@@ -9,6 +9,7 @@
 package org.csource.fastdfs;
 
 import org.csource.common.NameValuePair;
+import org.csource.fastdfs.*;
 
 import java.io.File;
 import java.net.InetSocketAddress;
@@ -52,7 +53,7 @@ public class TestAppender {
       String remote_filename;
       ServerInfo[] servers;
       TrackerClient tracker = new TrackerClient();
-      TrackerServer trackerServer = tracker.getTrackerServer();
+      TrackerServer trackerServer = tracker.getConnection();
 
       StorageServer storageServer = null;
 
@@ -297,10 +298,14 @@ public class TestAppender {
         return;
       }
   		/* for test only */
-      System.out.println("active test to storage server: " + storageServer.getConnection().activeTest());
+      System.out.println("active test to storage server: " + ProtoCommon.activeTest(storageServer.getSocket()));
+
+      storageServer.close();
 
   		/* for test only */
-      System.out.println("active test to tracker server: " + trackerServer.getConnection().activeTest());
+      System.out.println("active test to tracker server: " + ProtoCommon.activeTest(trackerServer.getSocket()));
+
+      trackerServer.close();
     } catch (Exception ex) {
       ex.printStackTrace();
     }

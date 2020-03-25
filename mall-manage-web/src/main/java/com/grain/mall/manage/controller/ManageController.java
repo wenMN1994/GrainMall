@@ -3,10 +3,7 @@ package com.grain.mall.manage.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.grain.mall.bean.*;
 import com.grain.mall.service.ManageService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -63,6 +60,12 @@ public class ManageController {
         // 返回平台属性中的平台属性值集合baseAttrInfo.getAttrValueList();
         return baseAttrInfo.getAttrValueList();
 
+    }
+
+    @RequestMapping("baseSaleAttrList")
+    @ResponseBody
+    public List<BaseSaleAttr> getBaseSaleAttrList(){
+        return   manageService.getBaseSaleAttrList();
     }
 
 }

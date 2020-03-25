@@ -67,4 +67,10 @@ public interface ManageService {
      * @return
      */
     List<SpuInfo> getSpuList(SpuInfo spuInfo);
+
+    /**
+     * 查询基本销售属性表
+     * @return
+     */
+    List<BaseSaleAttr> getBaseSaleAttrList();
 }

@@ -39,6 +39,9 @@ public class ManageServiceImpl implements ManageService {
     @Autowired
     private SpuInfoMapper spuInfoMapper;
 
+    @Autowired
+    private BaseSaleAttrMapper baseSaleAttrMapper;
+
 
     @Override
     public List<BaseCatalog1> getCatalog1() {
@@ -136,5 +139,11 @@ public class ManageServiceImpl implements ManageService {
         List<SpuInfo> spuInfoList = spuInfoMapper.select(spuInfo);
         return spuInfoList;
     }
+
+    @Override
+    public List<BaseSaleAttr> getBaseSaleAttrList() {
+        return baseSaleAttrMapper.selectAll();
+    }
+
 
 }

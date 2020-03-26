@@ -33,4 +33,13 @@ public class SpuManageController {
         List<SpuInfo> spuInfoList = manageService.getSpuList(spuInfo);
         return  spuInfoList;
     }
+
+    @RequestMapping("saveSpuInfo")
+    public void saveSpuInfo(@RequestBody SpuInfo spuInfo){
+
+        if (spuInfo!=null){
+            // 调用保存
+            manageService.saveSpuInfo(spuInfo);
+        }
+    }
 }

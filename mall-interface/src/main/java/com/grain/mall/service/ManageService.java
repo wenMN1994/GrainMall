@@ -73,4 +73,10 @@ public interface ManageService {
      * @return
      */
     List<BaseSaleAttr> getBaseSaleAttrList();
+
+    /**
+     * 保存SPU信息
+     * @param spuInfo
+     */
+    void saveSpuInfo(SpuInfo spuInfo);
 }

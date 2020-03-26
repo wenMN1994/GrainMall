@@ -2,11 +2,9 @@ package com.grain.mall.bean;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author：Dragon Wen
@@ -32,4 +30,11 @@ public class SpuInfo implements Serializable {
 
     @Column
     private  String catalog3Id;
+
+    @Transient
+    private List<SpuSaleAttr> spuSaleAttrList;
+
+    @Transient
+    private List<SpuImage> spuImageList;
+
 }

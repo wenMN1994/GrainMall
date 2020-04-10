@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author：Dragon Wen
  * @email：18475536452@163.com
  * @date：Created in 2020/3/16 22:18
- * @description：
+ * @description：用户信息
  * @modified By：
  * @version: $
  */

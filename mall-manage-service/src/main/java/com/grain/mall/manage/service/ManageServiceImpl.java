@@ -286,4 +286,8 @@ public class ManageServiceImpl implements ManageService {
         return skuInfo;
     }
 
+    public List<SpuSaleAttr> getSpuSaleAttrListCheckBySku (SkuInfo skuInfo){
+        return   spuSaleAttrMapper.selectSpuSaleAttrListCheckBySku(skuInfo.getId(),skuInfo.getSpuId());
+    }
+
 }

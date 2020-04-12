@@ -106,4 +106,11 @@ public interface ManageService {
      * @return
      */
     SkuInfo getSkuInfo(String skuId);
+
+    /**
+     * 根据商品SKU获取SPU销售属性
+     * @param skuInfo
+     * @return
+     */
+    List<SpuSaleAttr> getSpuSaleAttrListCheckBySku(SkuInfo skuInfo);
 }

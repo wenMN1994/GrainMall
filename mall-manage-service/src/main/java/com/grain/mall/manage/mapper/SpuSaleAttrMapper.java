@@ -22,4 +22,12 @@ public interface SpuSaleAttrMapper extends Mapper<SpuSaleAttr> {
      * @return
      */
     List<SpuSaleAttr> selectSpuSaleAttrList(String spuId);
+
+    /**
+     * 查询出sku对应spu的销售属性
+     * @param skuId
+     * @param spuId
+     * @return
+     */
+    List<SpuSaleAttr> selectSpuSaleAttrListCheckBySku(String skuId, String spuId);
 }

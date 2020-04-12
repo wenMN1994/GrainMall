@@ -165,7 +165,7 @@
 								<li>惊喜价</li>
 								<li>
 									<span>￥</span>
-									<span th:text="${skuInfo.price}">4499.00</span>
+									<span th:text="${#numbers.formatDecimal(skuInfo.price,1,2)}">4499.00</span>
 								</li>
 								<li>
 								 
@@ -202,7 +202,7 @@
 								<li class="box-stock-li">
 									<div class="box-stock-one"></div>
 								</li>
-								<li th:text="${skuInfo.weight}" >
+								<li th:text="${#numbers.formatDecimal(skuInfo.weight,1,2)}+' kg'" >
 									10 kg
 								</li>
 							</ul>
@@ -210,21 +210,18 @@
 						  
 						<div class="box-attr-3">
 						<br/>
-							<div class="box-attr-2 clear"  >
+							<div class="box-attr-2 clear" th:each="saleAttrInfo: ${saleAttrList}"  >
 								<dl>
-									<dt >选择颜色</dt>
-									<dd  class="redborder" >
-										<div  >
-											  摩卡金
-										</div>
-									</dd>
-									<dd  class="" >
-										<div  >
-											  太空银
+									<dt th:text="${saleAttrInfo.saleAttrName}" >选择颜色</dt>
+									<dd th:each="saleAttrValue: ${saleAttrInfo.spuSaleAttrValueList}" th:class="(${saleAttrValue.isChecked}=='1')?'redborder':''" class="redborder" >
+										<div th:value="${saleAttrValue.id}" th:text="${saleAttrValue.saleAttrValueName}" >
+											摩卡金
 										</div>
 									</dd>
 								</dl>
+								<br/>
 							</div>
+
 							<div class="box-attr-2 clear">
 								<dl>
 									<dt>选择版本</dt>

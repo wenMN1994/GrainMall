@@ -3,6 +3,8 @@ package com.grain.mall.manage.mapper;
 import com.grain.mall.bean.SkuSaleAttrValue;
 import tk.mybatis.mapper.common.Mapper;
 
+import java.util.List;
+
 /**
  * @author：Dragon Wen
  * @email：18475536452@163.com
@@ -12,4 +14,11 @@ import tk.mybatis.mapper.common.Mapper;
  * @version: $
  */
 public interface SkuSaleAttrValueMapper extends Mapper<SkuSaleAttrValue>{
+
+    /**
+     * 根据spuId 查询数据
+     * @param spuId
+     * @return
+     */
+    List<SkuSaleAttrValue> selectSkuSaleAttrValueListBySpu(String spuId);
 }

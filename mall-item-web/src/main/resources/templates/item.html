@@ -209,7 +209,10 @@
 						</div>
 						  
 						<div class="box-attr-3">
-						<br/>
+							<br/>
+							<!--隐藏域-->
+							<input type="hidden" id="valuesSku" th:value="${valuesSkuJson}"/>
+							<input type="hidden" id="skuId" th:value="${skuInfo.id}"/>
 							<div class="box-attr-2 clear" th:each="saleAttrInfo: ${saleAttrList}"  >
 								<dl>
 									<dt th:text="${saleAttrInfo.saleAttrName}" >选择颜色</dt>
@@ -221,30 +224,6 @@
 								</dl>
 								<br/>
 							</div>
-
-							<div class="box-attr-2 clear">
-								<dl>
-									<dt>选择版本</dt>
-									<dd>
-										<a href="#">标准版</a>
-									</dd>
-									<dd>
-										<a href="#">套装版</a>
-									</dd>
-								</dl>
-							</div>
-<!--
-							<div class="box-attr-2 clear">
-								<dl>
-									<dt>选择内存</dt>
-									<dd>
-										<a href="#">64GB</a>
-									</dd>
-									<dd>
-										<a href="#">128GB</a>
-									</dd>
-								</dl>
-							</div>-->
 							<br/>
 						</div>
 
@@ -997,7 +976,7 @@
 	</body>
 
 	<script src="/js/jquery1.9.js" type="text/javascript" charset="utf-8"></script>
-	<script src="/js/js.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/mall.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		function addToCart(){
 		    $("#itemForm").submit();
